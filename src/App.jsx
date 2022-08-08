@@ -18,7 +18,7 @@ function App() {
     }
 
     navigator.geolocation.getCurrentPosition(success)
-  }, [bgImg])
+  }, [])
 
   console.log(coords);
   

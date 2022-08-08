@@ -14,6 +14,7 @@ const WeatherApp = ({ lon, lat, setBgImg }) => {
 
       axios.get(URL)
         .then(res => {
+          
           setWeather(res.data)
           const temp = {
             celsius: {
@@ -32,107 +33,108 @@ const WeatherApp = ({ lon, lat, setBgImg }) => {
           setTemperature(temp)
 
 
-          if (weather?.weather[0].description === "clear sky") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/clear-sky.jpg)"
+            if (weather?.weather[0].description === "clear sky") {
+              let backgroundImg = {
+                backgroundImage: "url(/clear-sky.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Thunderstorm") {
+              let backgroundImg = {
+                backgroundImage: "url(/thunderstorm.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Drizzle") {
+              let backgroundImg = {
+                backgroundImage: "url(/Drizzle.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].description === "scattered clouds") {
+              let backgroundImg = {
+                backgroundImage: "url(/scattered-clouds.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].description === "few clouds") {
+              let backgroundImg = {
+                backgroundImage: "url(/few-clouds.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].description === "broken clouds") {
+              let backgroundImg = {
+                backgroundImage: "url(/broken-clouds.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].description === "overcast clouds") {
+              let backgroundImg = {
+                backgroundImage: "url(/overcast-clouds.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Rain") {
+              let backgroundImg = {
+                backgroundImage: "url(/rain.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Snow") {
+              let backgroundImg = {
+                backgroundImage: "url(/snow.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Mist") {
+              let backgroundImg = {
+                backgroundImage: "url(/mist.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Mist") {
+              let backgroundImg = {
+                backgroundImage: "url(/fog.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Smoke") {
+              let backgroundImg = {
+                backgroundImage: "url(/smoke.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Haze") {
+              let backgroundImg = {
+                backgroundImage: "url(/haze.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Dust") {
+              let backgroundImg = {
+                backgroundImage: "url(/dust.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Fog") {
+              let backgroundImg = {
+                backgroundImage: "url(/fog.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Sand") {
+              let backgroundImg = {
+                backgroundImage: "url(/sand.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Dust") {
+              let backgroundImg = {
+                backgroundImage: "url(/dust.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Ash") {
+              let backgroundImg = {
+                backgroundImage: "url(/volcanic-ash.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Squall") {
+              let backgroundImg = {
+                backgroundImage: "url(/squall.jpg)"
+              }
+              setBgImg(backgroundImg)
+            } else if (weather?.weather[0].main === "Tornado") {
+              let backgroundImg = {
+                backgroundImage: "url(/tornado.jpg)"
+              }
+              setBgImg(backgroundImg)
             }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Thunderstorm") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/thunderstorm.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Drizzle") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/Drizzle.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].description === "scattered clouds") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/scattered-clouds.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].description === "few clouds") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/few-clouds.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].description === "broken clouds") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/broken-clouds.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].description === "overcast clouds") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/overcast-clouds.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Rain") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/rain.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Snow") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/snow.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Mist") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/mist.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Mist") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/fog.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Smoke") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/smoke.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Haze") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/haze.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Dust") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/dust.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Fog") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/fog.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Sand") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/sand.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Dust") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/dust.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Ash") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/volcanic-ash.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Squall") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/squall.jpg)"
-            }
-            setBgImg(backgroundImg)
-          } else if (weather?.weather[0].main === "Tornado") {
-            let backgroundImg = {
-              backgroundImage: "url(../public/tornado.jpg)"
-            }
-            setBgImg(backgroundImg)
-          }
+
 
         })
         .catch(err => console.log(err))
@@ -165,6 +167,7 @@ const WeatherApp = ({ lon, lat, setBgImg }) => {
         <p>min:{isCeslsius ? temperature?.celsius.celsius_min : temperature?.farenheit.farenheit_min} </p>
         <p>max: {isCeslsius ? temperature?.celsius.celsius_max : temperature?.farenheit.farenheit_max}</p>
       </div>
+      <button onClick={changeTemperature}>{isCeslsius ? "Change to °F" : "Change to °C"}</button>
 
 
     </nav>
