@@ -32,7 +32,7 @@
 .container-temeperatures {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .App {
@@ -41,7 +41,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(../public/scattered-clouds.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover ;
@@ -50,10 +49,10 @@
 ul {
     width: 100%;
     list-style: none;
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 

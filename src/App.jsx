@@ -7,6 +7,8 @@ function App() {
   const [coords, setCoords] = useState()
   const [bgImg, setBgImg] = useState()
 
+  
+
   useEffect(() => {
 
     const success = (pos) => {
@@ -15,16 +17,16 @@ function App() {
         lon: pos.coords.longitude
       }
       setCoords(location)
+      
     }
 
     navigator.geolocation.getCurrentPosition(success)
+    
   }, [])
-
-  console.log(coords);
   
 
   return (
-    <div className="App" style={bgImg}>
+    <div className='App' style={bgImg}>
       <WeatherApp lon={coords?.lon} lat={coords?.lat} setBgImg={setBgImg}/>
     </div>
   )
